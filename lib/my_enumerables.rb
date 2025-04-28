@@ -56,6 +56,14 @@ module Enumerable
 
     res
   end
+
+  def my_inject(total)
+    for item in self
+      total = yield total, item
+    end
+
+    total
+  end
 end
 
 # You will first have to define my_each
