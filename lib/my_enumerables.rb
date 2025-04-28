@@ -46,6 +46,16 @@ module Enumerable
     end
     count
   end
+
+  def my_map
+    res = []
+
+    for item in self
+      res.push(yield item)
+    end
+
+    res
+  end
 end
 
 # You will first have to define my_each
