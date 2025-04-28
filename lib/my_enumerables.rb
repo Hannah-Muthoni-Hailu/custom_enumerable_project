@@ -15,6 +15,13 @@ module Enumerable
     end
     res
   end
+
+  def my_all?
+    for item in self
+      return false unless yield item
+    end
+    return true
+  end
 end
 
 # You will first have to define my_each
