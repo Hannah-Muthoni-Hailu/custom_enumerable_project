@@ -7,6 +7,14 @@ module Enumerable
       counter += 1
     end
   end
+
+  def my_select
+    res = []
+    for item in self
+      res.push(item) if yield item
+    end
+    res
+  end
 end
 
 # You will first have to define my_each
